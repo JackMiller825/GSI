@@ -1,0 +1,12 @@
+node_modules
+dist
+dist-ssr
+data
+.env
+.env.*
+*.local
+.DS_Store
+gsi-brand-assets.zip
+gsi-website-previews.zip
+gsi-brand-assets/
+gsi-website-previews/
