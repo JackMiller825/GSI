@@ -29,10 +29,6 @@ export function Tokenomics() {
           ))}
         </dl>
         <CopyAddress value={contractText(site.contractAddress)} />
-        <p className="verify-note">
-          <span aria-hidden="true">✦ </span>
-          VERIFY BEFORE YOU TRADE. Confirm the official contract, network, and destination from verified GSI channels.
-        </p>
       </div>
     </section>
   )
