@@ -14,6 +14,12 @@
   --header-offset: 92px;
   --display: "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
   --body: Inter, "Segoe UI", sans-serif;
+  --hero-display: "Bebas Neue", "Arial Narrow", Impact, sans-serif;
+  --story-display: Fraunces, Palatino, "Palatino Linotype", serif;
+  --story-text: Newsreader, Georgia, serif;
+  --specs-display: "Chakra Petch", "Segoe UI", sans-serif;
+  --guide-display: Sora, "Segoe UI", sans-serif;
+  --squad-display: Fredoka, "Trebuchet MS", sans-serif;
   --cream: #f4f7fb;
   --ink: #10182e;
   --white: #f7fbff;
@@ -417,6 +423,211 @@ button.is-pending {
   box-shadow: 0 0 10px #8dff7a;
 }
 
+.hero h1,
+.hero .eyebrow,
+.hero .ticker-badge,
+.hero .action,
+.hero .identity span {
+  font-family: var(--hero-display);
+  font-weight: 400;
+}
+
+.hero h1 {
+  font-size: clamp(4.2rem, 7.2vw, 6.4rem);
+  line-height: 0.8;
+  letter-spacing: 0.015em;
+}
+
+.hero h1 .accent {
+  text-shadow: 0 0 28px rgba(58, 214, 255, 0.28);
+}
+
+.hero .eyebrow {
+  font-size: 1.05rem;
+  letter-spacing: 0.22em;
+}
+
+.hero .action {
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+}
+
+.hero .identity span {
+  letter-spacing: 0.14em;
+}
+
+.story h2,
+.story .eyebrow {
+  font-family: var(--story-display);
+}
+
+.story h2 {
+  font-weight: 600;
+  font-size: clamp(2.55rem, 4.4vw, 4rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  text-transform: none;
+}
+
+.story h2 .accent {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.story .eyebrow {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.story p,
+.story blockquote p {
+  font-family: var(--story-text);
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+.story blockquote p {
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.42rem;
+  line-height: 1.45;
+}
+
+.tokenomics h2,
+.tokenomics .eyebrow,
+.tokenomics .fact-card dt,
+.tokenomics .fact-card dd,
+.tokenomics .ca-line,
+.tokenomics .copy-button,
+.tokenomics .copy-status {
+  font-family: var(--specs-display);
+}
+
+.tokenomics h2 {
+  font-weight: 700;
+  font-size: clamp(2.7rem, 4.8vw, 4.4rem);
+  line-height: 0.92;
+  letter-spacing: 0.035em;
+}
+
+.tokenomics .eyebrow,
+.tokenomics .fact-card dt {
+  font-weight: 500;
+  letter-spacing: 0.18em;
+}
+
+.tokenomics .fact-card dd,
+.tokenomics .ca-line {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.tokenomics .copy-button {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.howto h2,
+.howto .eyebrow,
+.howto .lead,
+.howto h3,
+.howto .steps p,
+.howto .step-no,
+.howto .action {
+  font-family: var(--guide-display);
+}
+
+.howto h2 {
+  font-weight: 700;
+  font-size: clamp(2.7rem, 5vw, 4.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+  text-transform: none;
+}
+
+.howto .eyebrow {
+  justify-content: center;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+}
+
+.howto .lead,
+.howto .steps p {
+  font-weight: 400;
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+.howto h3 {
+  font-weight: 600;
+  font-size: 1.28rem;
+  letter-spacing: -0.03em;
+  text-transform: none;
+}
+
+.howto .step-no {
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.howto .action {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.community h2,
+.community .eyebrow,
+.community .hangar p,
+.community .action {
+  font-family: var(--squad-display);
+}
+
+.community h2 {
+  font-weight: 600;
+  font-size: clamp(2.8rem, 5vw, 4.4rem);
+  line-height: 0.96;
+  letter-spacing: -0.03em;
+  text-transform: none;
+}
+
+.community .eyebrow {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.community .hangar p {
+  font-weight: 500;
+  font-size: 1.18rem;
+  line-height: 1.45;
+}
+
+.community .action {
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.site-footer .brand strong {
+  font-family: var(--hero-display);
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+}
+
+.site-footer .brand small,
+.footer-nav a {
+  font-family: var(--guide-display);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.footer-nav a {
+  font-size: 0.78rem;
+}
+
 .ticker-badge {
   display: inline-flex;
   margin: 18px 0 12px;
@@ -431,9 +642,12 @@ button.is-pending {
 
 .hook {
   margin: 0 0 8px;
-  font-size: clamp(1.35rem, 2vw, 1.7rem);
-  font-weight: 750;
-  line-height: 1.25;
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(1.55rem, 2.3vw, 2.15rem);
+  letter-spacing: 0.01em;
+  line-height: 1.12;
   color: var(--text);
 }
 
@@ -683,9 +897,8 @@ blockquote p {
 
 .steps h3 {
   margin: 14px 0 8px;
-  font-family: var(--display);
-  font-size: 1.55rem;
-  letter-spacing: 0.03em;
+  font-size: 1.28rem;
+  letter-spacing: -0.03em;
 }
 
 .steps p {
@@ -750,9 +963,11 @@ blockquote p {
 .footer-nav a {
   color: #d5e2f2;
   text-decoration: none;
-  font-size: 0.92rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  font-family: var(--guide-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .footer-nav a:hover {
