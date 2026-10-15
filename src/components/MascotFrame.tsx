@@ -1,7 +1,7 @@
 import { asset } from '../config/site.ts'
 
 type MascotFrameProps = {
-  label: string
+  label?: string
   alt: string
   variant: 'hero' | 'story' | 'community'
   priority?: boolean
@@ -21,7 +21,7 @@ export function MascotFrame({ label, alt, variant, priority = false, badge }: Ma
         decoding="async"
       />
       {badge ? <span className="signal-badge">{badge}</span> : null}
-      <figcaption>{label}</figcaption>
+      {label ? <figcaption>{label}</figcaption> : null}
     </figure>
   )
 }

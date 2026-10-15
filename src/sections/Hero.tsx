@@ -39,16 +39,12 @@ export function Hero() {
             <li>
               <span>TICKER</span> {site.ticker}
             </li>
-            <li>
-              <span>FACTS</span> Coming soon
-            </li>
           </ul>
         </div>
         <MascotFrame
           variant="hero"
           priority
           badge="SIGNAL LOCKED · GSI"
-          label="06 / SUPER BOT — HERO MODE"
           alt="Super Bot 06, a silver robot in a cobalt superhero suit and red cape, flying through a starfield."
         />
       </div>

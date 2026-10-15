@@ -1,10 +1,10 @@
 import { trackCta } from '../analytics/tracker.ts'
-import { configured, getSite } from '../config/site.ts'
+import { configured, contractText, getSite } from '../config/site.ts'
 
 export function HowToBuy() {
   const site = getSite()
   const dex = configured(site.dexUrl) ? site.dexUrl : null
-  const contract = configured(site.contractAddress) ? site.contractAddress : null
+  const contract = contractText(site.contractAddress)
 
   return (
     <section className="howto" id="how-to-buy" aria-labelledby="howto-heading">
@@ -40,14 +40,11 @@ export function HowToBuy() {
               ) : (
                 <span className="placeholder">[DEX_URL]</span>
               )}{' '}
-              and compare the full contract: {contract ? <span className="address">{contract}</span> : <span className="placeholder">[CONTRACT_ADDRESS]</span>}.
+              and compare the full contract: <span className={configured(site.contractAddress) ? 'address' : 'placeholder'}>{contract}</span>
+              {contract.endsWith('.') ? '' : '.'}
             </p>
           </li>
         </ol>
-        <p className="caution" role="note">
-          ⚠ Mockup guidance only. Token, network, contract, exchange, and fees remain placeholders. Crypto assets are
-          volatile.
-        </p>
         <p className="facts-link-wrap">
           <a className="action action-cyan" href="#tokenomics" onClick={() => trackCta('chart')}>
             CHECK TOKEN FACTS ↓

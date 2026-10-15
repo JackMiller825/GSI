@@ -7,8 +7,6 @@ export function Community() {
   const site = getSite()
   const telegram = configured(site.telegramUrl) ? site.telegramUrl : null
   const xUrl = configured(site.xUrl) ? site.xUrl : null
-  const latest = configured(site.latestUrl) ? site.latestUrl : null
-  const destinations = configured(site.officialSocialLinks) ? site.officialSocialLinks : '[OFFICIAL_SOCIAL_LINKS]'
 
   return (
     <section className="community" id="community" aria-labelledby="community-heading">
@@ -27,11 +25,7 @@ export function Community() {
             <ActionLink className="action action-dark" href={xUrl} external onTrack={() => trackCta('x')}>
               FOLLOW ON X ↗
             </ActionLink>
-            <ActionLink className="action action-cyan" href={latest} external>
-              GET THE LATEST
-            </ActionLink>
           </div>
-          <p className="destinations">DESTINATIONS {destinations}</p>
         </div>
         <MascotFrame
           variant="community"

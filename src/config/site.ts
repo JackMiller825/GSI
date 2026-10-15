@@ -5,10 +5,11 @@ export const siteConfig = {
   ticker: '$GSI',
   mascot: '06 Super Bot',
   network: null as string | null,
-  totalSupply: null as string | null,
-  taxDetails: null as string | null,
+  totalSupply: '1,000,000,000',
+  taxDetails: '0%',
   contractAddress: null as string | null,
-  liquidityDetails: null as string | null,
+  liquidityDetails: 'Burn',
+  ownership: 'Renounce',
   officialSocialLinks: null as string | null,
   dexUrl: null as string | null,
   chartUrl: null as string | null,
@@ -36,6 +37,12 @@ export const unresolvedAssets = [
   'gsi-super-bot-community-scene.png',
   'gsi-social-preview-1200x630.png',
 ] as const
+
+export const pendingContractLabel = 'Coming Soon..'
+
+export function contractText(address: string | null): string {
+  return address && address.trim() ? address.trim() : pendingContractLabel
+}
 
 export function asset(file: string): string {
   return `${import.meta.env.BASE_URL}assets/${file}`
